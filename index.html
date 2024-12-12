@@ -8,10 +8,10 @@
 </head>
 <body>
         <main>
-            <div class="container">
+            <div class="container fade-in">
                 <img src="img/eu.jpeg" class="minha-imagem" alt="minha imagem">
-                <p class="nome">Diego Henrique Alves Moreira</p>
-                <hr>
+                <p class="nome fade-in">Diego Henrique Alves Moreira</p>
+                <hr class="fade-in">
                 <p>Sou técnico em Análise e
                     Desenvolvimento de Sistemas, recémgraduado, com formação nas
                     tecnologias abaixo citadas. Busco minha
@@ -24,12 +24,22 @@
                     que me são propostos.
                     </p>
                     <p class="contatos">contatos</p>
-                    <hr class="hr-2">
-                    <p class="contatos-cont">
+                    <hr>
+                    <p class="contatos fade-in">
                         Celular: (11) 98096-4370 <br>
                         Email: diego.moreira37@proton.me
                     </p>
             </div>
         </main>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const elements = document.querySelectorAll(".fade-in");
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add("show");
+                    }, index * 200); 
+                });
+            });
+        </script>
 </body>
 </html>
